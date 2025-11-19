@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Đặt Lịch</title>
+  </head>
+  <body>
+    <form action="/submit-appointment" method="post">
+      <p>
+        <label for="fullname">Họ và tên:</label>
+        <input type="text" id="fullname" name="fullname" required />
+      </p>
+
+      <p>
+        <label for="datetime">Chọn ngày giờ:</label>
+        <input
+          type="datetime-local"
+          id="datetime"
+          name="appointment_datetime"
+          required
+        />
+      </p>
+
+      <p>
+        <label for="service">Loại dịch vụ:</label>
+        <select id="service" name="service_type" required>
+          <option value="tu_van">Tư vấn</option>
+          <option value="ky_thuat">Kỹ thuật</option>
+          <option value="ho_tro">Hỗ trợ</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="notes">Ghi chú:</label>
+        <textarea id="notes" name="notes" rows="5" cols="40"></textarea>
+      </p>
+
+      <p>
+        <button type="submit">Đặt lịch</button>
+      </p>
+    </form>
+  </body>
+</html>
